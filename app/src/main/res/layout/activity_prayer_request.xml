@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    tools:context="com.cksolutions.rosary.PrayerRequestActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout6"
+        android:layout_width="368dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="11dp"
+            app:srcCompat="@drawable/prayinghands" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout7"
+        android:layout_width="368dp"
+        android:layout_height="171dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout6">
+
+        <Spinner
+            android:id="@+id/spSendTo"
+            android:layout_width="239dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/etGiveThanks"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/etGiveThanks"
+            android:backgroundTint="@color/btn_common"
+            tools:layout_editor_absoluteX="118dp"
+            tools:layout_editor_absoluteY="266dp" />
+
+        <EditText
+            android:id="@+id/etGiveThanks"
+            android:layout_width="332dp"
+            android:layout_height="111dp"
+            android:maxLength="50"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:hint="Prayer"
+            android:inputType="textMultiLine"
+            android:textColor="@color/btn_login_bg"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="302dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/spSendTo"
+            android:layout_alignLeft="@+id/etGiveThanks"
+            android:layout_alignStart="@+id/etGiveThanks"
+            android:text="Send To"
+            android:textAlignment="center"
+            android:textColor="@color/btn_login_bg"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="272dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout8"
+        android:layout_width="367dp"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout7">
+
+        <Button
+            android:id="@+id/btSendRequest"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/btn_common"
+            android:text="SEND REQUEST"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="430dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar3"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

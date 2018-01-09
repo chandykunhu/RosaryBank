@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    tools:context="com.cksolutions.rosary.DonateActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout12"
+        android:layout_width="344dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintHorizontal_bias="0.5"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/relativeLayout13">
+
+        <Button
+            android:id="@+id/btDonate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/btn_common"
+            android:text="Get More"
+            tools:layout_editor_absoluteX="136dp"
+            tools:layout_editor_absoluteY="344dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout13"
+        android:layout_width="344dp"
+        android:layout_height="176dp"
+        ads:layout_constraintBottom_toTopOf="@+id/relativeLayout12"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintHorizontal_bias="0.5"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvDonateLabel"
+            android:layout_width="208dp"
+            android:layout_height="68dp"
+            android:text="Your Points in Rosary Bank Project"
+            android:textAlignment="center"
+            android:textColor="@color/btn_login_bg"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/tvDonation"
+            android:layout_width="80dp"
+            android:layout_height="43dp"
+            android:layout_alignBottom="@+id/tvDonateLabel"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@+id/tvDonateLabel"
+            android:layout_toRightOf="@+id/tvDonateLabel"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="22sp"
+            tools:layout_editor_absoluteX="237dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/tvRankLabel"
+            android:layout_width="206dp"
+            android:layout_height="73dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvDonateLabel"
+            android:layout_marginTop="15dp"
+            android:text="Your Global Rank Rating in Rosary Bank"
+            android:textAlignment="center"
+            android:textColor="@color/btn_login_bg"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="219dp" />
+
+        <TextView
+            android:id="@+id/tvRank"
+            android:layout_width="81dp"
+            android:layout_height="44dp"
+            android:layout_alignEnd="@+id/tvDonation"
+            android:layout_alignRight="@+id/tvDonation"
+            android:layout_alignTop="@+id/tvRankLabel"
+            android:layout_marginTop="12dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="22sp"
+            tools:layout_editor_absoluteX="259dp"
+            tools:layout_editor_absoluteY="249dp" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

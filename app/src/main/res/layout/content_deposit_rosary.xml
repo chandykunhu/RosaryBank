@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cksolutions.rosary.DepositRosaryActivity"
+    tools:showIn="@layout/activity_deposit_rosary">
+
+    <EditText
+        android:id="@+id/etRosaryCount"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Rosary Count"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tvRosaryType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etShortNote"
+        android:layout_width="317dp"
+        android:layout_height="126dp"
+        android:ems="10"
+        android:hint="To Whom you are dedicating and tell reason why...!!!"
+        android:inputType="textMultiLine"
+        android:maxLength="50"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerDedicatedTo" />
+
+    <Spinner
+        android:id="@+id/spinnerRosaryType"
+        android:layout_width="316dp"
+        android:layout_height="45dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tvDedicatedTo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRosaryType" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/btn_common"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etShortNote" />
+
+    <Spinner
+        android:id="@+id/spinnerDedicatedTo"
+        android:layout_width="316dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/etShortNote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDedicatedTo" />
+
+    <TextView
+        android:id="@+id/tvRosaryType"
+        android:layout_width="318dp"
+        android:layout_height="31dp"
+        android:text="  Rosary Type"
+        android:textAlignment="textStart"
+        android:textColor="@color/btn_login_bg"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerRosaryType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRosaryCount" />
+
+    <TextView
+        android:id="@+id/tvDedicatedTo"
+        android:layout_width="314dp"
+        android:layout_height="31dp"
+        android:text="  Dedicated To"
+        android:textAlignment="textStart"
+        android:textColor="@color/btn_login_bg"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerDedicatedTo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerRosaryType" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSave"
+        app:layout_constraintStart_toEndOf="@+id/btnSave"
+        app:layout_constraintTop_toBottomOf="@+id/etShortNote"
+        app:layout_constraintVertical_bias="0.448" />
+
+
+</android.support.constraint.ConstraintLayout>

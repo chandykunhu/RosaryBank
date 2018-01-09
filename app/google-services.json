@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "242470126877",
+    "firebase_url": "https://rosarybank-1d930.firebaseio.com",
+    "project_id": "rosarybank-1d930",
+    "storage_bucket": "rosarybank-1d930.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242470126877:android:4e5e020a8a41c203",
+        "android_client_info": {
+          "package_name": "com.cksolutions.animation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "242470126877-kbbs0lurn1ck0j7jrj00kk1156bl0a9g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cksolutions.animation",
+            "certificate_hash": "3ca81b2eab292d6cebeb29d144df907156f1457b"
+          }
+        },
+        {
+          "client_id": "242470126877-1t8fk4l9d8p9ngdtfenr6pquu1cn5q73.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWwBNXtnPJy_z5woz0UZYliIjr3GVp_8A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "242470126877-1t8fk4l9d8p9ngdtfenr6pquu1cn5q73.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242470126877:android:37a06fb0885911db",
+        "android_client_info": {
+          "package_name": "com.cksolutions.rosary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "242470126877-q07bgpf4qgpkeuf19i73hlbim6e51gb7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cksolutions.rosary",
+            "certificate_hash": "3ca81b2eab292d6cebeb29d144df907156f1457b"
+          }
+        },
+        {
+          "client_id": "242470126877-1t8fk4l9d8p9ngdtfenr6pquu1cn5q73.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWwBNXtnPJy_z5woz0UZYliIjr3GVp_8A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "242470126877-1t8fk4l9d8p9ngdtfenr6pquu1cn5q73.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
