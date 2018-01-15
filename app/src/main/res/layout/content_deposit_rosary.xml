@@ -10,10 +10,11 @@
     tools:showIn="@layout/activity_deposit_rosary">
 
     <EditText
-        android:id="@+id/etRosaryCount"
+        android:id="@+id/etRosaryDedicatedTo"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:maxLength="2"
         android:ems="10"
         android:hint="Rosary Count"
         android:inputType="number"
@@ -35,25 +36,25 @@
         android:maxLength="50"
         android:textColor="@color/white"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/btnSave"
+        app:layout_constraintBottom_toTopOf="@+id/btnRequest"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerDedicatedTo" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerRequestType" />
 
     <Spinner
         android:id="@+id/spinnerRosaryType"
         android:layout_width="316dp"
         android:layout_height="45dp"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/tvDedicatedTo"
+        app:layout_constraintBottom_toTopOf="@+id/tvRequestType"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRosaryType" />
 
     <Button
-        android:id="@+id/btnSave"
+        android:id="@+id/btnRequest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/btn_common"
@@ -65,14 +66,14 @@
         app:layout_constraintTop_toBottomOf="@+id/etShortNote" />
 
     <Spinner
-        android:id="@+id/spinnerDedicatedTo"
+        android:id="@+id/spinnerRequestType"
         android:layout_width="316dp"
         android:layout_height="50dp"
         app:layout_constraintBottom_toTopOf="@+id/etShortNote"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDedicatedTo" />
+        app:layout_constraintTop_toBottomOf="@+id/tvRequestType" />
 
     <TextView
         android:id="@+id/tvRosaryType"
@@ -87,10 +88,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etRosaryCount" />
+        app:layout_constraintTop_toBottomOf="@+id/etRosaryDedicatedTo" />
 
     <TextView
-        android:id="@+id/tvDedicatedTo"
+        android:id="@+id/tvRequestType"
         android:layout_width="314dp"
         android:layout_height="31dp"
         android:text="  Dedicated To"
@@ -98,7 +99,7 @@
         android:textColor="@color/btn_login_bg"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/spinnerDedicatedTo"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerRequestType"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,8 +112,8 @@
         android:layout_height="wrap_content"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnSave"
-        app:layout_constraintStart_toEndOf="@+id/btnSave"
+        app:layout_constraintEnd_toStartOf="@+id/btnRequest"
+        app:layout_constraintStart_toEndOf="@+id/btnRequest"
         app:layout_constraintTop_toBottomOf="@+id/etShortNote"
         app:layout_constraintVertical_bias="0.448" />
 

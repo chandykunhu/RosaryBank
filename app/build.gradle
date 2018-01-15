@@ -19,7 +19,7 @@ android {
         defaultConfig {
             applicationId "com.cksolutions.rosary"
             versionCode code
-            versionName "1.0.9"
+            versionName "2.1.2"
             minSdkVersion 15
             targetSdkVersion 26
 
@@ -66,6 +66,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
+
+
 
 
 

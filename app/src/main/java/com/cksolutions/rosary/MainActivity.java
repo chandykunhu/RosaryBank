@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity
     private FirebaseAuth.AuthStateListener authListener;
     private FirebaseAuth auth;
     private Button btnRosaryDeposit;
+    private Button btnRosaryRequest;
     private Button btnPrayerRequest;
     private Button btnGiveThanks;
     private TextView txtvwBalanceGlobal;
@@ -62,6 +63,8 @@ public class MainActivity extends AppCompatActivity
     private DatabaseReference databaseRef3;
     private DatabaseReference databaseRef4;
     private DatabaseReference databaseRef5;
+    private DatabaseReference databaseRef6;
+    private DatabaseReference databaseRef7;
 
     static FirebaseUser user;
     static Handler handler;
@@ -161,7 +164,10 @@ public class MainActivity extends AppCompatActivity
         View hView = navigationView.getHeaderView(0);
         txtvwAccount = (TextView) hView.findViewById(R.id.tvAccountName);
         txtvwEmail = (TextView) hView.findViewById(R.id.tvEmailId);
-
+        btnRosaryDeposit = (Button) findViewById(R.id.btnDepositRosary);
+        btnRosaryRequest = (Button) findViewById(R.id.btnRequestRosary);
+        btnPrayerRequest = (Button) findViewById(R.id.btnRequestPrayer);
+        btnGiveThanks = (Button) findViewById(R.id.btnThanks);
 
          /* For showing Name in Navigation View*/
 
@@ -271,7 +277,7 @@ public class MainActivity extends AppCompatActivity
 
             databaseRef3.addValueEventListener(new ValueEventListener() {
                 @Override
-                public void onDataChange(DataSnapshot balanceSnapshot) {                    //progress bar
+                public void onDataChange(DataSnapshot balanceSnapshot) {
                     if (balanceSnapshot.getValue() != null) {
                         String balanceRosary = balanceSnapshot.getValue().toString();
 
@@ -287,10 +293,63 @@ public class MainActivity extends AppCompatActivity
                 }
             });
 
+            databaseRef6 = database.getReference("Rosaries").child(uid).child("RosaryBankA");
+            databaseRef7 = database.getReference("Rosaries").child(uid).child("RosaryBankB");
+            databaseRef6.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot balanceSnapshot) {
+                    if (balanceSnapshot.getValue() != null) {
+                        String balanceRosary = balanceSnapshot.getValue().toString();
+
+                        if (balanceRosary.trim().length() > 0) {
+                            if(Integer.parseInt(balanceRosary) < 0)
+                            {
+                                btnRosaryRequest.setEnabled(false);
+                                Toast.makeText(MainActivity.this, "Deposit "+Math.abs(Integer.parseInt(balanceRosary))+" more " +
+                                        "Mercy Rosary in Rosary Bank to Request Rosary", Toast.LENGTH_LONG).show();
+                            }
+                            else {
+                                btnRosaryRequest.setEnabled(true);
+                            }
+                        }
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    // ...
+                }
+            });
+            databaseRef7.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot balanceSnapshot) {
+                    if (balanceSnapshot.getValue() != null) {
+                        String balanceRosary = balanceSnapshot.getValue().toString();
+
+                        if (balanceRosary.trim().length() > 0) {
+                            if(Integer.parseInt(balanceRosary) < 0)
+                            {
+                                btnRosaryRequest.setEnabled(false);
+
+                                Toast.makeText(MainActivity.this, "Deposit "+Math.abs(Integer.parseInt(balanceRosary))+" more " +
+                                        "Mercy Rosary in Rosary Bank to Request Rosary", Toast.LENGTH_LONG).show();
+                            }
+                            else {
+                                btnRosaryRequest.setEnabled(true);
+                            }
+                        }
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    // ...
+                }
+            });
+
+
 
             //Deposit Rosary button click
-
-            btnRosaryDeposit = (Button) findViewById(R.id.btnDepositRosary);
 
             btnRosaryDeposit.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -311,10 +370,28 @@ public class MainActivity extends AppCompatActivity
                 }
             });
 
+            //Request Rosary button click
+
+            btnRosaryRequest.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if (Isconnected()) {
+                        if (IsNewUser) {
+                            startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
+                            //databaseRef.setValue(250);
+                        } else {
+
+                            startActivity(new Intent(MainActivity.this, RosaryRequestActivity.class));
+                        }
+                    } else {
+                        Snackbar.make(v, "Check Internet Connection", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+                }
+            });
 
             //Request Prayer button click
-
-            btnPrayerRequest = (Button) findViewById(R.id.btnRequestPrayer);
 
             btnPrayerRequest.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -331,7 +408,6 @@ public class MainActivity extends AppCompatActivity
 
 
             //Give Thanks button click
-            btnGiveThanks = (Button) findViewById(R.id.btnThanks);
 
             btnGiveThanks.setOnClickListener(new View.OnClickListener() {
                 @Override

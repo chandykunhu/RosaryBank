@@ -71,10 +71,12 @@ public class NotificationActivity extends AppCompatActivity implements RecyclerI
     private CoordinatorLayout coordinatorLayout;
     private FirebaseDatabase database;
     private DatabaseReference databaseRef;
+    private DatabaseReference databaseRef2;
     static FirebaseUser user;
     private FirebaseAuth.AuthStateListener authListener;
     private String uid = "";
     private ProgressBar progressBar;
+    List<NotificationItems> alllistitems = new LinkedList<NotificationItems>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,7 +101,6 @@ public class NotificationActivity extends AppCompatActivity implements RecyclerI
                 }
             }
         };
-
         progressBar = (ProgressBar) findViewById(R.id.progressBar5);
         //progress bar
         progressBar.setVisibility(View.VISIBLE);
@@ -129,7 +130,8 @@ public class NotificationActivity extends AppCompatActivity implements RecyclerI
 
         // making http call and fetching menu json
         //prepareCart();
-        prepareitems();
+        //prepareitems();
+        prepareallitems();
 
        /* ItemTouchHelper.SimpleCallback itemTouchHelperCallback1 = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
             @Override
@@ -247,7 +249,94 @@ public class NotificationActivity extends AppCompatActivity implements RecyclerI
             });
         }
     }
+    public void prepareallitems() {
 
+        if (user != null) {
+            uid = user.getUid();
+        }
+        if (!uid.isEmpty() && uid.trim().length() > 0) {
+
+            //get firebase database instance
+            database = FirebaseDatabase.getInstance();
+            //get firebase database instance
+            databaseRef2 = database.getReference("Notifications");
+            databaseRef2.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot snapshot) {
+
+                    long countnotifications = 0;
+
+                    for (DataSnapshot snaptotal : snapshot.getChildren()) {
+
+                        String timeStamp = new SimpleDateFormat("yyyyMMdd").format(new Date(System.currentTimeMillis() - countnotifications * 24 * 60 * 60 * 1000));
+                        long count = snapshot.child(timeStamp).getChildrenCount();
+
+                        for (DataSnapshot snap : snapshot.child(timeStamp).getChildren()) {
+                            if (snapshot.child(timeStamp).child("N" + Long.toString(count)).exists()) {
+
+                                if (snapshot.child(timeStamp).child("N" + Long.toString(count)).child("Title").exists()) {
+
+                                    String title = snapshot.child(timeStamp).child("N" + Long.toString(count)).child("Title").getValue().toString();
+
+                                    if (snapshot.child(timeStamp).child("N" + Long.toString(count)).child("Message").exists()) {
+
+                                        String message = snapshot.child(timeStamp).child("N" + Long.toString(count)).child("Message").getValue().toString();
+
+                                        if (snapshot.child(timeStamp).child("N" + Long.toString(count)).child("Image").exists()) {
+
+                                            String image = snapshot.child(timeStamp).child("N" + Long.toString(count)).child("Image").getValue().toString();
+
+                                            if (snapshot.child(timeStamp).child("N" + Long.toString(count)).child("Severity").exists()) {
+
+                                                String severity = snapshot.child(timeStamp).child("N" + Long.toString(count)).child("Severity").getValue().toString();
+
+                                                NotificationItems objnotitems = new NotificationItems();
+                                                objnotitems.setTitle(title);
+                                                objnotitems.setMessage(message);
+                                                objnotitems.setThumbnail(image);
+                                                objnotitems.setSeverity(severity);
+                                                alllistitems.add(objnotitems);
+                                            }
+                                        }
+
+                                    }
+
+                                }
+                                Log.e(snap.getKey(), snap.getChildrenCount() + "");
+                            }
+                            count--;
+                            Log.e(snaptotal.getKey(), snaptotal.getChildrenCount() + "");
+                        }
+                        countnotifications++;
+                    }
+
+
+                    if (alllistitems.size() > 0) {
+                        cartList.clear();
+                        cartList.addAll(alllistitems);
+                        // refreshing recycler view
+                        mAdapter.notifyDataSetChanged();
+                        txtNotifications.setVisibility(View.INVISIBLE);
+                        //Toast.makeText(NotificationActivity.this, "Swipe Left to delete notifications",
+                        //Toast.LENGTH_LONG).show();
+                        alllistitems.clear();
+                    } else {
+                        txtNotifications.setVisibility(View.VISIBLE);
+                        txtNotifications.setText("There are no new notifications...");
+                    }
+                    //progress bar
+                    progressBar.setVisibility(View.INVISIBLE);
+
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+        }
+    }
 
     /**
      * method make volley network call and parses json

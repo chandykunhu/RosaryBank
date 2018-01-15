@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    tools:context="com.cksolutions.rosary.RosaryRequestActivity">
+
+
+    <EditText
+        android:id="@+id/etRosaryDedicatedTo"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Rosary Request For...enter name"
+        android:inputType="textPersonName"
+        android:maxLength="10"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tvRosaryType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etShortNote"
+        android:layout_width="317dp"
+        android:layout_height="126dp"
+        android:ems="10"
+        android:hint="Tell reason why you are requesting rosaries...!!!"
+        android:inputType="textMultiLine"
+        android:maxLength="50"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btnRequest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxAgree" />
+
+    <Spinner
+        android:id="@+id/spinnerRosaryType"
+        android:layout_width="316dp"
+        android:layout_height="45dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tvRequestType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRosaryType" />
+
+    <Button
+        android:id="@+id/btnRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/btn_common"
+        android:text="Request"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/progressBar10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etShortNote" />
+
+    <Spinner
+        android:id="@+id/spinnerRequestType"
+        android:layout_width="316dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxAgree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRequestType" />
+
+    <TextView
+        android:id="@+id/tvRosaryType"
+        android:layout_width="318dp"
+        android:layout_height="31dp"
+        android:text=" Rosary Type"
+        android:textAlignment="textStart"
+        android:textColor="@color/btn_login_bg"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerRosaryType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRosaryDedicatedTo" />
+
+    <TextView
+        android:id="@+id/tvRequestType"
+        android:layout_width="314dp"
+        android:layout_height="31dp"
+        android:text=" Request Type"
+        android:textAlignment="textStart"
+        android:textColor="@color/btn_login_bg"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerRequestType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerRosaryType" />
+
+    <ProgressBar
+        android:id="@+id/progressBar10"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnRequest"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnRequest"
+        app:layout_constraintTop_toBottomOf="@+id/etShortNote" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I agree to Deposit Rosaries I requested"
+        android:textColor="@color/btn_login_bg"
+        android:textIsSelectable="false"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etShortNote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerRequestType" />
+
+</android.support.constraint.ConstraintLayout>

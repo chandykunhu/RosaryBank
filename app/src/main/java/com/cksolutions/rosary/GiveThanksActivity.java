@@ -175,7 +175,8 @@ public class GiveThanksActivity extends AppCompatActivity {
                                         .setValue("Thanks Given for. Note:" + thanks);
                                 databaseRef2.child("TimeLine" + (size + 1)).child("Date")
                                         .setValue(timeStamp);
-
+                                Toast.makeText(GiveThanksActivity.this, "Thanks given send to " + (usercount - 1) + " users." +
+                                        "God bless you", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -194,8 +195,7 @@ public class GiveThanksActivity extends AppCompatActivity {
                         objInternetHandler.formUrlThanks(UName, thanks, queuetype);
                         objInternetHandler.execute();
 
-                        Toast.makeText(GiveThanksActivity.this, "Thanks given send to " + (usercount - 1) + " users." +
-                                "God bless you", Toast.LENGTH_LONG).show();
+
                         finish();
 
                     } else {

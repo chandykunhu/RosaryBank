@@ -177,7 +177,8 @@ public class PrayerRequestActivity extends AppCompatActivity {
                                         .setValue("Requested for prayer. Note:" + prayer);
                                 databaseRef2.child("TimeLine" + (size + 1)).child("Date")
                                         .setValue(timeStamp);
-
+                                Toast.makeText(PrayerRequestActivity.this, "Prayer requested to " + (usercount - 1) + " users." +
+                                        " Your prayer request will be answered soon. God bless you", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -197,8 +198,6 @@ public class PrayerRequestActivity extends AppCompatActivity {
                         objInternetHandler.formUrlPrayer(UName, prayer, queuetype);
                         objInternetHandler.execute();
 
-                        Toast.makeText(PrayerRequestActivity.this, "Prayer requested to " + (usercount - 1) + " users." +
-                                " Your prayer request will be answered soon. God bless you", Toast.LENGTH_LONG).show();
                         finish();
 
                     }

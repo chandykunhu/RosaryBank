@@ -63,9 +63,30 @@ public class NotificationHandler {
             }
         });
     }
-    public void RequestRosary()
+    public void RequestRosary(final String name,final String message,final String severity)
     {
+        final String timeStamp = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a").format(new Date());
+        databaseRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // get total available quest
+                long size = dataSnapshot.getChildrenCount();
 
+                databaseRef.child("N" + (size + 1)).child("Title")
+                        .setValue("Rosary Request by " + name + " ");
+                databaseRef.child("N" + (size + 1)).child("Message")
+                        .setValue(" " + message + " ");
+                databaseRef.child("N" + (size + 1)).child("Image")
+                        .setValue("http://api.haizenetworks.com/rosaryrequest.jpg");
+                databaseRef.child("N" + (size + 1)).child("Severity")
+                        .setValue(""+severity+": "+timeStamp+"");
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
 

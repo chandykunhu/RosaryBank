@@ -36,6 +36,13 @@ public class InternetRequestHandler extends AsyncTask<String,Void,String> {
         objNHandler.DepositRosary(name,message);
 
     }
+    public void formUrlRequestRosary(String name,String message,final String severity)
+    {
+        IsPostExecute = false;
+        urlformat = "http://api.haizenetworks.com/?title=Rosary+Request+by+"+name+"&message="+message+"&include_image=on&push_type=topic";
+        objNHandler.RequestRosary(name,message,severity);
+
+    }
 
     public void formUrlNewJoin(String name,String message)
     {

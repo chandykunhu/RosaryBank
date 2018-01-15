@@ -100,6 +100,10 @@ public class DepositRosaryActivity extends AppCompatActivity {
             }
         };
 
+
+        inputRosaryCount = (EditText) findViewById(R.id.etRosaryDedicatedTo);
+        inputShortNote = (EditText) findViewById(R.id.etShortNote);
+
         //Spinner Rosary Type
         final Spinner spinner = (Spinner) findViewById(R.id.spinnerRosaryType);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -123,7 +127,7 @@ public class DepositRosaryActivity extends AppCompatActivity {
 
 
         //Spinner Dedicated To
-        final Spinner spinner2 = (Spinner) findViewById(R.id.spinnerDedicatedTo);
+        final Spinner spinner2 = (Spinner) findViewById(R.id.spinnerRequestType);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
                 R.array.dedicated_to, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -173,9 +177,25 @@ public class DepositRosaryActivity extends AppCompatActivity {
             databaseRef4.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
-                    if (!snapshot.exists()) {
+                    if (!snapshot.child("RosaryA").exists()) {
                         databaseRef4.child("RosaryA").setValue("0");
                         databaseRef4.child("RosaryB").setValue("0");
+                    }
+                    if (!snapshot.child("RosaryBankA").exists()) {
+                        databaseRef4.child("RosaryBankA").setValue("0");
+                        databaseRef4.child("RosaryBankB").setValue("0");
+                    }
+                    if(!snapshot.child("RosaryOthersA").exists()) {
+                        databaseRef4.child("RosaryOthersA").setValue("0");
+                        databaseRef4.child("RosaryOthersB").setValue("0");
+                    }
+                    if(!snapshot.child("RosaryOrganisationA").exists()) {
+                        databaseRef4.child("RosaryOrganisationA").setValue("0");
+                        databaseRef4.child("RosaryOrganisationB").setValue("0");
+                    }
+                    if(!snapshot.child("RosaryPersonalA").exists()) {
+                        databaseRef4.child("RosaryPersonalA").setValue("0");
+                        databaseRef4.child("RosaryPersonalB").setValue("0");
                     }
                 }
 
@@ -185,10 +205,8 @@ public class DepositRosaryActivity extends AppCompatActivity {
                 }
             });
 
-            btnSave = (Button) findViewById(R.id.btnSave);
+            btnSave = (Button) findViewById(R.id.btnRequest);
             btnSave.setEnabled(true);
-            inputRosaryCount = (EditText) findViewById(R.id.etRosaryCount);
-            inputShortNote = (EditText) findViewById(R.id.etShortNote);
 
             btnSave.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -212,22 +230,72 @@ public class DepositRosaryActivity extends AppCompatActivity {
                         }
 
                         if (SelectedType == 0) {
-                            databaseRef = database.getReference("Rosaries").child(uid).child("RosaryA");
+                            databaseRef = database.getReference("Rosaries").child(uid);
 
                             RosaryType = "RosaryA";
 
                             databaseRef.addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot balanceSnapshot) {
-                                    if (balanceSnapshot.getValue() != null) {
-                                        String balanceRosary = balanceSnapshot.getValue().toString();
+                                    if (balanceSnapshot.child("RosaryA").getValue() != null) {
+                                        String balanceRosary = balanceSnapshot.child("RosaryA").getValue().toString();
 
                                         if (balanceRosary.trim().length() > 0) {
 
                                             int Rosary = Integer.parseInt(balanceRosary);
-                                            databaseRef.setValue(Integer.toString(Rosary + Integer.parseInt(count)));
+                                            databaseRef.child("RosaryA").setValue(Integer.toString(Rosary + Integer.parseInt(count)));
                                         }
                                     }
+                                    if(SelectedDedicatedType == 0) {
+
+                                        if (balanceSnapshot.child("RosaryBankA").getValue() != null) {
+                                            String balanceRosary = balanceSnapshot.child("RosaryBankA").getValue().toString();
+
+                                            if (balanceRosary.trim().length() > 0) {
+
+                                                int Rosary = Integer.parseInt(balanceRosary);
+                                                databaseRef.child("RosaryBankA").setValue(Integer.toString(Rosary + Integer.parseInt(count)));
+                                            }
+                                        }
+                                    }
+                                    else if(SelectedDedicatedType == 1)
+                                    {
+                                        if (balanceSnapshot.child("RosaryOthersA").getValue() != null) {
+                                            String balanceRosary = balanceSnapshot.child("RosaryOthersA").getValue().toString();
+
+                                            if (balanceRosary.trim().length() > 0) {
+
+                                                int Rosary = Integer.parseInt(balanceRosary);
+                                                databaseRef.child("RosaryOthersA").setValue(Integer.toString(Rosary + Integer.parseInt(count)));
+                                            }
+                                        }
+                                    }
+                                    else if(SelectedDedicatedType == 2)
+                                    {
+                                        if (balanceSnapshot.child("RosaryOrganisationA").getValue() != null) {
+                                            String balanceRosary = balanceSnapshot.child("RosaryOrganisationA").getValue().toString();
+
+                                            if (balanceRosary.trim().length() > 0) {
+
+                                                int Rosary = Integer.parseInt(balanceRosary);
+                                                databaseRef.child("RosaryOrganisationA").setValue(Integer.toString(Rosary + Integer.parseInt(count)));
+                                            }
+                                        }
+                                    }
+                                    else if(SelectedDedicatedType == 3)
+                                    {
+                                        if (balanceSnapshot.child("RosaryPersonalA").getValue() != null) {
+                                            String balanceRosary = balanceSnapshot.child("RosaryPersonalA").getValue().toString();
+
+                                            if (balanceRosary.trim().length() > 0) {
+
+                                                int Rosary = Integer.parseInt(balanceRosary);
+                                                databaseRef.child("RosaryPersonalA").setValue(Integer.toString(Rosary + Integer.parseInt(count)));
+                                            }
+                                        }
+                                    }
+
+
                                 }
 
                                 @Override
@@ -238,20 +306,68 @@ public class DepositRosaryActivity extends AppCompatActivity {
 
                         } else if (SelectedType == 1) {
 
-                            databaseRef2 = database.getReference("Rosaries").child(uid).child("RosaryB");
+                            databaseRef2 = database.getReference("Rosaries").child(uid);
 
                             RosaryType = "RosaryB";
 
                             databaseRef2.addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot balanceSnapshot) {
-                                    if (balanceSnapshot.getValue() != null) {
-                                        String balanceRosary = balanceSnapshot.getValue().toString();
+                                    if (balanceSnapshot.child("RosaryB").getValue() != null) {
+                                        String balanceRosary = balanceSnapshot.child("RosaryB").getValue().toString();
 
                                         if (balanceRosary.trim().length() > 0) {
 
                                             int Rosary = Integer.parseInt(balanceRosary);
-                                            databaseRef2.setValue(Integer.toString(Rosary + Integer.parseInt(count)));
+                                            databaseRef2.child("RosaryB").setValue(Integer.toString(Rosary + Integer.parseInt(count)));
+                                        }
+                                    }
+                                    if(SelectedDedicatedType == 0) {
+
+                                        if (balanceSnapshot.child("RosaryBankB").getValue() != null) {
+                                            String balanceRosary = balanceSnapshot.child("RosaryBankB").getValue().toString();
+
+                                            if (balanceRosary.trim().length() > 0) {
+
+                                                int Rosary = Integer.parseInt(balanceRosary);
+                                                databaseRef2.child("RosaryBankB").setValue(Integer.toString(Rosary + Integer.parseInt(count)));
+                                            }
+                                        }
+                                    }
+                                    else if(SelectedDedicatedType == 1)
+                                    {
+                                        if (balanceSnapshot.child("RosaryOthersB").getValue() != null) {
+                                            String balanceRosary = balanceSnapshot.child("RosaryOthersB").getValue().toString();
+
+                                            if (balanceRosary.trim().length() > 0) {
+
+                                                int Rosary = Integer.parseInt(balanceRosary);
+                                                databaseRef2.child("RosaryOthersB").setValue(Integer.toString(Rosary + Integer.parseInt(count)));
+                                            }
+                                        }
+                                    }
+                                    else if(SelectedDedicatedType == 2)
+                                    {
+                                        if (balanceSnapshot.child("RosaryOrganisationB").getValue() != null) {
+                                            String balanceRosary = balanceSnapshot.child("RosaryOrganisationB").getValue().toString();
+
+                                            if (balanceRosary.trim().length() > 0) {
+
+                                                int Rosary = Integer.parseInt(balanceRosary);
+                                                databaseRef2.child("RosaryOrganisationB").setValue(Integer.toString(Rosary + Integer.parseInt(count)));
+                                            }
+                                        }
+                                    }
+                                    else if(SelectedDedicatedType == 3)
+                                    {
+                                        if (balanceSnapshot.child("RosaryPersonalB").getValue() != null) {
+                                            String balanceRosary = balanceSnapshot.child("RosaryPersonalB").getValue().toString();
+
+                                            if (balanceRosary.trim().length() > 0) {
+
+                                                int Rosary = Integer.parseInt(balanceRosary);
+                                                databaseRef2.child("RosaryPersonalB").setValue(Integer.toString(Rosary + Integer.parseInt(count)));
+                                            }
                                         }
                                     }
                                 }

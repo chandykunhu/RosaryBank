@@ -53,6 +53,12 @@
         <item>Mercy Rosary</item>
     </string-array>
 
+    <string-array name="rosary_request_type">
+        <item>Normal</item>
+        <item>Urgent</item>
+        <item>Critical</item>
+    </string-array>
+
     <string-array name="dedicated_to">
         <item>Rosary Bank</item>
         <item>Other People</item>

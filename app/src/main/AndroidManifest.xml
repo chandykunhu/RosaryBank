@@ -83,7 +83,9 @@
         <activity android:name=".DonateActivity" />
         <activity android:name=".TransactionActivity" />
         <activity android:name=".PrayerRequestActivity" />
-        <activity android:name=".GiveThanksActivity"></activity>
+        <activity android:name=".GiveThanksActivity" />
+        <activity android:name=".RosaryRequestActivity" />
+        <activity android:name=".TestimonyActivity"></activity>
     </application>
 
 </manifest>
