@@ -1,15 +1,13 @@
 <resources>
     <string name="app_name">Rosary Bank</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
-
     <string name="action_sign_in_short">Register</string>
     <string name="email">Email</string>
     <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
     <string name="auth_failed">Authentication failed, check your email and password or sign up</string>
+    <string name="new_user">Please register in Rosary Bank with your email and any password</string>
     <string name="change_email">Change Email</string>
     <string name="change_password">Change Password</string>
     <string name="send_password_reset_email">Send Password reset email</string>
@@ -73,8 +71,484 @@
 
     <string name="facebook_app_id">1960893827462071</string>
     <string name="title_activity_notification">NotificationActivity</string>
-
-
     <string name="my_cart">Notifications</string>
     <string name="delete">DELETE</string>
+
+
+    <!-- Rosary Prayer-->
+    <string name="action_add_favourite">Add to Favourites</string>
+    <string name="action_play_next">Play Next</string>
+    <string name="backdrop_title">DEVOTIONAL PRAYERS</string>
+    <string name="backdrop_subtitle">All the Christian Prayers</string>
+
+
+    <string name="title_activity_rosary_prayer">RosaryPrayer</string>
+    <string name="rosary_english_annunciation">
+        "The time for the Incarnation is at hand.
+        Of all women God prepared Mary from her conception to be the Mother of the Incarnate Word.
+        The Angel Gabriel announces: Hail, full of grace! The Lord is with thee.
+        Mary wonders at this salutation.
+        The Angel assures her: "Fear not .. you shall conceive in your womb, and give birth to a Son."
+        Mary is troubled for she has made a vow of virginity.
+        The Angel answers that she will conceive by the power of the Holy Spirit, and her Son will be called the Son of God.
+        The Incarnation awaits Mary's consent.
+        Mary answers: "Behold the handmaid of the Lord. Be it done unto me according to your word."
+        The Word was made flesh and dwelt among us.
+
+        Dear Mary, when the angel gave you a message that God wanted you to conceive Jesus, the savior,
+        you said yes to Him without questioning your well-being.  You were engaged to Joseph,
+        you knew you could be stoned to death,  you knew people would not like you,
+        but you trusted God fully because you knew He knows better and has your best interest at heart no matter what happens.
+        Even if you would suffer. Pray for me too, that I may be humble like you and accept God's Will in my life,
+        no matter what that is. Also, pray for me that I may have the discernment to know His Will,
+        and to live as a reflection of His commandments, especially the greatest of all Jesus left us,
+        "Love God above, and neighbor as I love myself"!
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_visitation">
+        "Mary's cousin Elizabeth conceived a son in her old age.. for nothing is impossible with God.
+        Charity prompts Mary to hasten to visit Elizabeth in the hour of her need.
+        The journey to Elizabeth's home is about eighty miles requiring four or five days.
+        Though long and arduous, the journey is joyous, for Mary bears with her the Incarnate Word.
+        At Mary's salutation, John the Baptist is sanctified in his mother's womb.
+        Elizabeth exclaims: "Blessed are you among women, and blessed is the fruit of your womb."
+        "How have I deserved that the mother of my Lord should come to me?"
+        "Blessed is she who believed that the "Lord's" words to her would be fulfilled."
+        Mary replies: "My soul proclaims the greatness of the Lord, and my spirit finds joy in God my Savior."
+        Mary serves her cousin in all humility for three months until the birth of John the Baptist.
+
+        Dear Mary even though you were pregnant, you rushed to go to help your cousin Elizabeth who needed more help.
+        Despite your cousin being older, she knelt before you calling you "Blessed Among Women",
+        honored that the Mother of God would visit her. Dear Mother, teach me to love like you,
+        and remind me and the whole world how much you love us; how much God the Father and Jesus the Son love us.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_nativity">
+        "Joseph and Mary go to Bethlehem to comply with the decree of Caesar Augustus.
+        The hour for Mary to give birth is near, but there is no room in the inn.
+        In the stillness of the night, the Savior is born in a cave, Mary remaining a Virgin.
+        She wraps Him in swaddling clothes and lays Him in a manger.
+        In unspeakable joy Mary gathers to her bosom the Flower of her virginity.
+        Jesus enters the world in poverty to teach the lesson of detachment from earthly things.
+        The angel announces to the shepherds: "Today there is born to you in the town of David a Savior, Who is Christ the Lord."
+        The angelic chorus sing: "Glory to God in the highest, and peace to His people on earth."
+        The shepherds come to the stable to pay homage to the Infant Jesus.
+        The Magi come to adore the Holy Child and offer Him gifts.
+
+        Dear Jesus, you were born in a poor place, because hotels couldn't give your mother and St. Joseph a place to have you.
+        Even though you were Almighty and Son of God the Father, you didn't push or impose your power,
+        you were born among the poor who welcomed you, in a stable, with the Shepherds.
+        Please dear Jesus help me to be simple and gentle like you and God the Father,
+        help me never to impose my will, power or strength on others. Help me to respect others,
+        especially the poor. Mother Mary who had a baby in such an uncomfortable place,
+        remind me to be calm no matter what turbulence I might find in this life.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_presentation">
+        "Observing the law of Moses they take Jesus to the temple to present Him to the Lord.
+        According to the Law the firstborn male child of every family should be consecrated to the Lord.
+        Mary offers her Son to the Father, then ransoms Him back at the price paid by the poor.
+        Jesus is not subject to the law of Moses, yet to teach obedience, submits to it.
+        Mary is not subject to the law of purification, yet in humility she submits to it.
+        God had revealed to Simeon that he would not see death until he had seen the Messiah.
+        Recognizing the Child, he prays: "Now you can dismiss your servant in peace. You have fulfilled your word."
+        "This Child is destined to be the downfall and rise of many in Israel, a sign that will be opposed."
+        And to Mary Simeon reveals: "And your own soul a sword shall pierce."
+        After they fulfill all the Law requires they return to Nazareth.
+
+        Dear Jesus you respected the culture of blessings for children,
+        and you inspired your parents to do the same as everyone else. And yet you were God Himself.
+        Through the prayer of the Rosary, I am constantly reminded about your simplicity,
+        your deep love for me and all of us. You came to live among us, and became like us,
+        to teach us to live this life. Please help me to know how to love you back and
+        to appreciate the sacrifice you made to leave Heaven and come on earth.
+        Teach me to respect the law of my country and my church even when I feel opposed.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_findingjesus">
+        "When Jesus is twelve years old, He goes with His parents to Jerusalem for the feast of the Passover.
+        After the feast of the Passover, Joseph and Mary unknowingly set out for Nazareth without Jesus.
+        At the end of the first day's journey they discover Jesus is missing.
+        His parents return immediately looking for Him.
+        This loss causes grief and anxiety beyond our understanding to the hearts of Mary and Joseph.
+        On the third day they find Jesus in the Temple among the Doctors who were astonished at His wisdom.
+        Mary: "Son, why have you done this to us? Your father and I have been searching for You in sorrow."
+        Jesus: "Why did you search for Me? Did you not know that I must be about My "Father's" business?"
+        Jesus goes down with them to Nazareth, and is subject to them.
+        Mary keeps all these things in her heart.
+
+        Dear Jesus, you stayed behind in the temple preaching about your Father, and 3 days went by,
+        even though you wanted to be with your mother and father, you knew you came on a mission to serve your Father
+        and earn souls for heaven. Help me to put God first in my life, in my work, even when things are not going as I wish.
+        Mother Mary, pray for me that I know how to deal with pain as graciously as you did in your life and
+        please help to find and imitate Jesus in all I do, that I may do all with unselfish love.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_agony">
+        "Jesus comes with his disciples to Gethsemani: "Stay here, while I go yonder and pray."
+        Entering the garden with Peter, James, and John, Jesus prays, "My soul is sorrowful unto death."
+        Jesus sees the sins of all mankind, whose guilt He has taken upon Himself.
+        He sees the wrath of the Father which His sufferings must appease.
+        So great is his anguish that His sweat becomes as drops of blood falling to the ground.
+        An angel appears to Him from heaven to strengthen Him.
+        "Father, if it be possible, let this cup pass from Me; yet, not My will but Yours be done."
+        Finding the disciples asleep: "Could you not watch one hour with me?"
+        Jesus is betrayed by Judas, cruelly bound and led away.
+        Father, by the merits of the agony of Jesus in the Garden, have mercy on us and on the whole world.
+
+        Dear Jesus, You lived 33 years among us, knowing what would happen to you, and yet you kept going,
+        you had power you could have used to avoid this much suffering but you accepted it all to save us.
+        You sweat blood thinking of how you would die so badly the next day. You asked your Father in your
+        agony to take away the suffering, but brought yourself back quickly, and asked Him to let His Will be done in you,
+        not yours. Help me to also want God's Will, your will, to be done in my life, not mine.
+        Teach me how to control myself even when I know I can change the situation,
+        give me the strength to do what is right in the eyes of God alone.
+        Forgive me my sins that caused you that much pain, and thank you for loving me that much.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_scourging">
+        "Jesus is taken before the High Priest where He is falsely accused, buffeted and insulted.
+        The Jewish leaders take Jesus before Pilate, for only he can impose the death penalty.
+        The robber, Barabbas, is preferred to Jesus.
+        Pilate can "find no cause in Him", yet to appease the Jews, he orders Jesus to be scourged.
+        The scourge is made of leather thongs to which are attached small sharp bones.
+        Jesus is bound to a pillar and cruelly scourged until His whole body is covered with deep wounds.
+        The Lamb of God offers His suffering for the sins of mankind.
+        Jesus suffers so much in His sacred flesh to satisfy, especially, for sins of the flesh.
+        The prophecy of Isaiah is fulfilled: "He was wounded for our iniquities, He was bruised for our sins."
+        Father, by the merits of Jesus in this painful scourging, have mercy on us and on the whole world.
+
+        Dear Jesus, I am so sorry that one for whom you gave your life, betrayed you. You were beaten up so badly,
+        they tore up your skin, they didn't have mercy for you, and they hurt you to please themselves.
+        You have done nothing to deserve such punishment, willingly accepted for my sake. Please dear Jesus,
+        help me to love you, to appreciate you, and never allow me to complain about injustice done to me,
+        but to love beyond the cross.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_crowning">
+        "Pilate asks, "Are You a king?" Jesus answers: "I am a King, but My kingdom is not of this world."
+        In the praetorium, the soldiers place an old purple robe on Jesus in mockery of His claim to be a king.
+        They fashion a crown out of thorns, and forcefully press it down upon His head.
+        In His bound hands they place a reed, as a sceptre, in mockery of His kingship.
+        Kneeling before Him in derision, they spit on Him, and cry out: "Hail, King of the Jews!"
+        Taking the reed from His hand they strike Him on the head, driving the thorns more deeply into His scalp.
+        Pilate brings Jesus before the people, hoping His pitiful sight will soften them: "Behold the man!"
+        Their response: "Crucify Him! Crucify Him!"
+        Our Blessed Lord submitted to this terrible humiliation to make reparation for our pride.
+        Father, by the merits of this painful humiliation, have mercy on us and on the whole world.
+
+        My Dear King, You were mocked after they beat you, and crowned you with thorns and yet you were the TRUE king.
+        With the pain and humiliation you felt, you didn't respond to anything unkindly.
+        You did what your human strength allowed, without uttering a word of insult or complaint,
+        or using your Godly power. You had me and my brothers and sisters instead to defend and protect.
+        Hoping we would listen to your warnings, accept your sacrifice and make a better choice to be with you
+        one day in a paradise forever. Help me to remain in truth,
+        to support truth and acknowledge truth even when I am wrong. Allow me to trust you,
+        to accept my sufferings and offer them to you, and never let my sufferings make me do wrong.
+        Help me to forgive always and never strike back.  You are the just judge, you will defend me.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_carrying">
+        "One condemned to death by crucifixion is forced to carry the cross to the place of execution.
+        The suffering of Jesus is intense as the cross is laid on His bruised and wounded back and shoulders.
+        Weak and exhausted from loss of blood, lack of food and rest, Jesus falls three times under the cross.
+        Jesus meets His afflicted Mother causing untold anguish in the Hearts of Son and Mother.
+        The countenance of Jesus is disfigured with blood and sweat, with dust and spittle.
+        Veronica wipes His face, leaving on her towel the image of His countenance.
+        Fearing that Jesus might die on the way, the soldiers force Simon of Cyrene to carry the cross behind Jesus.
+        Jesus speaks to weeping women: "Weep not for Me, but for yourselves and your children."
+        "If anyone is to be My disciple, let him take up his cross and follow Me."
+        Father, by the merits of this painful journey to Calvary, have mercy on us and on the whole world.
+
+        Dear Jesus, You carried the cross over the wounds of the beatings and thorns.
+        I am so sorry for what you had to go through. You fell down many times, at the heaviness of your cross
+        and you rose again. Dear Jesus, you are the most loving being that ever lived, you took all that willingly,
+        for me and everyone else. It was not a quick death, they tortured you all day, and you still remained kind.
+        You met your mother on the way which gave you strength to have Her support but also pain to see Her suffering so badly.
+        Teach me to love Her and to love you. Mother Mary, you who saw everything, thank Him for me,
+        kiss His scars for me, and remind that despite my sins I love Him.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_crucifixion">
+        "The hands and feet of Jesus are nailed to the cross in the presence of His afflicted Mother.
+        "Father, forgive them for they know not what they do."
+        "This day you will be with Me in paradise."
+        "Woman, behold your son. Son, behold your Mother."
+        "My God, My God, why have You forsaken Me?"
+        "I thirst."
+        "It is finished."
+        "Father, into Your hands I commend My spirit."
+        The side of Jesus is pierced with a lance. His body is taken down and placed in the arms of His Mother.
+        Father, by the merits of the crucifixion and death of Jesus, have mercy on us and on the whole world.
+
+        Dear Jesus, Before you died you forgave those who killed you, teaching us to forgive without measure.
+        In the middle of such crushing pain, you gave us your mother Mary to also be our Mother so she could
+        comfort us as she comforted you. Please remind me the price you paid for me so I can remember this all my life,
+        remind me to obey you and help me to remember every word you said and try to put it in practice.
+        Like the thief on your right side, I am not worthy for heaven but please remember me
+        when I get to your kingdom and have mercy on all the sinners.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_resurrection">
+        "The body of Jesus is placed in the tomb on the evening of Good Friday.
+        His soul descends into the realm of the dead to announce to the Just the tidings of their redemption.
+        Fearing the body of Jesus will be taken, the chief priests place guards at the tomb.
+        On the third day Jesus rises from the dead, glorious and immortal.
+        The earth quakes as the angel rolls back the stone, the guards flee in terror.
+        The holy women coming to anoint the body of Jesus are amazed and frightened to find the tomb open.
+        An angel calms their fears: "He is not here. He has risen as He said."
+        Jesus appears to Mary Magdalen and Peter and two disciples on the way to Emmaus.
+        That evening He appears to the apostles behind locked doors: "Peace be unto you.. do not be afraid."
+        Jesus breathes on them and gives them the power to forgive sin.
+
+        Dear Jesus, You resurrected after 3 days in the tomb as you have said you would.
+        And when you resurrected you didn't make it a big deal and tell all those who doubted you to see what you did.
+        In all humility and simplicity you did what you had to without showing off. You thought us simplicity,
+        all that matters is to seek  your approval patiently not of human,
+        to do our tasks in simplicity no matter how big they are, or who they prove wrong or right.
+        You told us that we will know a tree by its fruits. You also comforted us in trusting every word you said by
+        resurrecting as you said. Please help the whole humanity to know who saved them and who to trust.
+        You love us so much and you want us to trust you fully and be under your protection.
+        We have a God who is so powerful and capable to resolve all our problems, no one should leave in fear or desperation.
+        You are more than capable. Please bring joy into a world that is so sad and lost.
+        Bring peace and comfort to the troubled.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_ascension">
+        "Jesus remains on earth forty days after His Resurrection to prove He has truly risen from the dead.
+        He commissions the apostles to preach the gospel to every creature, and promises to be with them forever.
+        He will not leave them orphans, but will send the Holy Spirit to enlighten and strengthen them.
+        Jesus proceeds to Mt. Olivet accompanied by His Mother and the apostles and disciples.
+        Extending His pierced hands over all in a last blessing, He ascends into heaven.
+        As He ascends a cloud takes Him from their sight.
+        Jesus ascends to take His place at the right hand of the Father.
+        What jubilation there must be amid the angels of heaven at the triumphant entry of Jesus.
+        The wounds in His glorified body are an endless plea before the Father on our behalf.
+        The disciples leave Mt. Olivet and "return to Jerusalem with great joy."
+
+        Dear Jesus, You resurrected as you said and you went back to heaven as you said in front of your disciples.
+        What touches most, before you rose from earth you comforted your disciples and told them that you are not leaving them
+        alone but you are going to prepare a place for them so they can join you later to live eternally happy.
+        You sent them to spread the good news that you are the way, the truth and the life.
+        That the one who believes in you shall not die and will eternally happy. And they you cared to remind them
+        that you will send them the Holy Spirit to strengthen them in the mission you have them.
+        I thank you for that when we think we are alone, or tired, not capable, you have thought about everything
+        we will need and you provide. We love you Jesus and we want to fully trust you and love you more.
+        Please give us the strength necessary to see, to love you, to help you be your messengers among your
+        children in the world so we can continue to help you save the world.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_descent">
+        "The apostles are gathered in the upper room where Jesus had held the Last Supper.
+        They are persevering in prayer with Mary the Mother of Jesus.
+        A sound comes from heaven like the rush of a mighty wind, and it fills the whole house.
+        The Holy Spirit descends on each of them in the form of tongues of fire.
+        Filled with the Gifts of the Holy Spirit, they are enlightened and strengthened to spread the Gospel.
+        Having lost all fear of the Jewish leaders, the apostles boldly preach Christ crucified.
+        The multitudes are confounded because every man hears them speak in his own tongue.
+        The Holy Spirit comes upon the Infant Church never to leave it.
+        That first day Peter goes forth to preach and baptizes three thousand.
+        The feast of Pentecost is the birthday of the Church, for on that day it begins to grow.
+
+        Dear Jesus, You went back to celebrate your accomplishment on earth, saving us and living back in your paradise.
+        But you didn't forget our little strengths. You kept your promise to send the Holy Spirit to your disciples.
+        Sending the Holy Spirit to all of us who will need His help and strength. Today the Holy Spirit is still with us,
+        especially when we need Him for clarity, to enlighten the way, to love ourselves and love one another,
+        to heal us in soul and body, to help us to understand God's ways etc. Dear Jesus, please send me the Holy Spirit,
+        to help me in many needs of my hearts, those I am aware of and those I am not aware of.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_assumption">
+        "After the apostles have dispersed, the Blessed Mother goes to live with John, the beloved disciple.
+        Mary lives many years on earth after the death of Christ.
+        She is a source of comfort, consolation and strength to the apostles.
+        As she had nourished the infant Jesus, so she nourishes spiritually the infant Church.
+        Mary dies, not of bodily infirmity, but is wholly overcome in a rapture of divine love.
+        Her body as well as her soul is taken up into heaven.
+        After her burial the apostles go to the tomb and find only fragrant lilies.
+        Jesus does not permit the sinless body of His Mother to decay in the grave.
+        Corruption of the body is an effect of original sin from which Mary is totally exempted.
+        The bodies of all mankind, at the last judgment, will be brought back and united again to the soul.
+
+        Dear Blessed Virgin Mary, You have pleased God so much in your life. You have done His Will to the perfection,
+        and because you have placed nearest to the Holy Trinity. You were chosen to be Jesus' Mother because you were so pure.
+        You never condemned anyone, you said a bad word about anyone. You always wanted to help those in need,
+        protect their dignity and reputation. You are our perfect model on how to live this life and how to love God
+        and others to the best. Please mother who was given to us to be our own mother. Teach us how to be like you,
+        to make good choices in our lives to follow God's ways. Pray for us so that we have enough discernment to
+        recognize the truth. More than anything so many people are broken by so much injustice, lack of love, loneliness,
+        rejection etc.. please awaken our hearts to know how much God loves us, how much you love us.
+        You said in the past that if we knew how much we are loved, we would cry of joy. Our hearts have been so hardened,
+        we don't feel it as it is. Pray for us mother.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_coronation">
+        "As Mary enters heaven, the entire court of heaven greets with joy this masterpiece of God's creation.
+        Mary is crowned by her divine Son as Queen of heaven and earth.
+        More than we can ever know the Hearts of Jesus and Mary overflow with joy at this reunion.
+        Only in heaven will we know the great majesty of that coronation, and the joy it gave to the angels and saints.
+        Even the angels, who by nature are greater than humans, hail Mary as their Queen.
+        Mary shares so fully in the glory of Christ because she shared so fully in His suffering.
+        Only in heaven will we see how central is the role of Mary in the divine plan of redemption.
+        The angels and saints longed for the coming of her whose heel crushes the head of the serpent.
+        Mary pleads our cause as a most powerful Queen and a most merciful and loving Mother.
+        A great sign appeared in heaven; a woman clothed with the sun, the moon under her feet, and on her head a crown of twelve stars.
+
+        Dear Blessed Virgin Mary, You became the queen of heaven and earth as a reward of how you lived your life so lovingly
+        and purely. Oh mother we know everyone who lives their lives lovingly and correctly will also know so much joy in heaven,
+        eternally. You are now our Mother and our Queen, which make us princesses and princes!
+        Mother why do we even ever worry about anything when we have the one who loves us this much,
+        and who can give us whatever we ask for? But mother what we need most is love and light in this world,
+        please pleas to Jesus for is to give it to us, He can never say no to you. Pray for us as you always do
+        and open our hearts to the truth of the love of God for us and help us to love Him back and appreciate Him. We love you.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_baptism">
+        "John is baptizing in the Jordan proclaiming a baptism of repentance.
+        "I am the voice of one crying in the desert, make straight the way of the Lord."
+        "One mightier than I is coming after me."
+        "I have baptized you with water, He will baptize you with the Holy Spirit."
+        Seeing Jesus, John exclaims: "Behold the Lamb of God."
+        Against protests of his unworthiness, John baptizes Jesus in the Jordan.
+        After Jesus' baptism a voice from Heaven: "This is my beloved Son in whom I am well pleased."
+        The Spirit descends upon Jesus in the form of a dove.
+        In this heavenly manifestation is instituted the sacrament of baptism.
+        The divine Trinity is manifested: the voice of the Father is heard as the Spirit descends upon the Son. stars.
+
+        Dear Jesus, you showed us how important our sacraments are by getting baptized yourself even if you didn't need it.
+        You were one with the Father always. Even at the baptism, He spoke from heaven,
+        "This is my beloved Son in whom I am well pleased"! You are the Way, Truth and Life,
+        help me to see your light and have the wisdom and courage to follow you.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_cana">
+        "Jesus, His Mother and disciples were invited to a wedding in Cana.
+        During the wedding feast the wine ran short.
+        Mary turned to Jesus: "They have no wine."
+        Jesus replied: "What would you have Me do? My hour has not yet come."
+        Mary said to the waiters: "Do whatever He tells you."
+        There were six stone water jars, each holding fifteen to twenty gallons.
+        Jesus bids the waiters to fill the jars with water, and then draw some out and take it to the chief steward.
+        The chief steward said to the groom: "Every man serves the good wine first.. but you have saved the good wine until now."
+        At Mary's request, Jesus worked His first miracle.
+        By His presence, Christian marriage was raised to the dignity of a Sacrament.
+
+        Dear Jesus, your Mother told you about the need for wine at the wedding,
+        you told her it was not yet the time for you to perform miracles, but out of compassion and love for your mother,
+        you performed a miracle by changing the water into wine, because She asked. You changed water into wine,
+        not just any wine but the best wine, better than what they had before and you did it privately.
+        People were surprised that the host of the wedding served better wine at the end.
+        My dear Jesus grant me the grace to see the role of Mary in my life, to ask her for help when I am in need.
+        Because you love her so much, and she loves me so much as a mother. You know the desires of my heart,
+        if you change water into wine, I trust that you can change my sorrow into joy, my failures into triumph,
+        help me with the help of Mary to seek to please you first, to live a peaceful life,
+        to be a loving hand that reaches out to my brothers and sisters always,
+        all else will be added to me.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_proclamation">
+        ""Repent, for the kingdom of God is at hand."
+        "My kingdom is not of this world."
+        "Unless a man be born again of water and the Spirit, he cannot enter the kingdom of heaven."
+        "Whoever does not accept the kingdom of God as a little child will not enter into it."
+        "I have come to call sinners, not the just."
+        "Love your enemies, pray for those who persecute you."
+        "Blessed are the poor in spirit, for theirs is the kingdom of heaven."
+        "Blessed are they who hunger and thirst for justice, for they shall be satisfied."
+        "Blessed are they who suffer persecution for justice sake, for theirs is the kingdom of heaven."
+        "You are Peter, and upon this rock I will build My church.. I will give you the keys of the kingdom of heaven."
+
+        Dear Jesus, you left your heaven, your paradise to come to live with us, to come to teach us,
+        no matter how high the cost to you, the suffering you would go through.
+        You accepted it so you could teach me how to love and live a life detached from earthly good so I could
+        earn a place in heaven and live eternally happy.  Thank you for everything you did for us,
+        please give me humility to be able to listen to you and understand what you mean.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_transfiguration">
+        "Jesus took Peter, James and John up a high mountain to pray.
+        Jesus was transfigured before them.
+        "His face became as dazzling as the sun, his clothes as radiant as light."
+        This was to fortify their faith to withstand the coming tragedy of the Passion.
+        Jesus foresaw the 'scandal of the cross,' and prepared them for it by this manifestation of His glory.
+        Moses and Elias (representing the Law and the prophets of the Old Testament) were conversing with Jesus about His Passion.
+        "Do not think I have come to destroy the Law or the Prophets.. but to fulfill them."
+        From a cloud came a voice: "This is my beloved Son, listen to Him."
+        Jesus admonishes them not to tell the vision to anyone until the Son of Man rises from the dead.
+        We too will behold the transfigured Jesus on the Last Day.
+
+        Dear Jesus, you called Peter, James and John to go with you on the mountain, when you got there,
+        you transformed into light, then Alijaah and Moses appeared beside you.
+        Peter was so surprised and felt the joy of heaven and asked if you could all stay there.
+        Then the voice of God said again, "this is my beloved Son in whom I am well pleased! Listen to Him"!
+        What a joy Jesus to be with you! What touched my heart is that you did this to strengthen the disciples
+        for what was going to follow. You would be beaten up, you would be shamed,
+        you would give yourself willingly without resistance.  Facing all that you were able to think of your
+        disciples who might be confused when they witnessed it, especially the one who would be the rock,
+        on which you would build your church, Peter. Thank you for understanding our weaknesses,
+        please help me to never deny you, to see you in everyone, to feel your presence always.
+        Help me to be patient with myself when I need it. Help me to be humble enough to rely on your guidance in this life.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="rosary_english_eucharist">
+        "I have eagerly desired to eat this Passover with you before I suffer.
+        Jesus took bread, blessed it: "Take and eat, this is My Body."
+        Taking the wine: "This cup is the new covenant in my Blood, shed for you."
+        At that eucharistic meal, Jesus celebrated the first Mass.
+        At every Mass the sacrifice of Calvary is made present.
+        At the Last Supper Jesus instituted the sacrament of Holy Orders to perpetuate this sacrifice.
+        "Whoever eats my flesh and drinks my blood remains in me and I in him."
+        The Eucharist is a sacrifice inasmuch as it is offered up, and a sacrament inasmuch as it is received.
+        In the Mass we offer ourselves to God, and God gives himself to us.
+        The Mass will be fruitful in the measure of our surrender to the Father.
+
+        Dear Jesus, before you were put to death you still had to remember to give us the Eucharist through which you
+        would remain with us eternally because you loved us that much. At the table where you shared your heritage with us,
+        was Judas who would betray you and Peter who would deny you. Yet you didn't push anyone away,
+        you didn't exclude anyone from taking part in your gifts. Thank you, and please help me to love everyone,
+        to be fair in all I do, and to love you and see you in the Eucharist.
+
+        <b>\nOur Father.. \t\t10Hail Mary"'"s \t\tGlory be.."</b>
+
+    </string>
+    <string name="title_activity_normal_english_rosary">NormalEnglishRosary</string>
+    <string name="title_activity_normal_malayalam_rosary">NormalMalayalamRosary</string>
 </resources>

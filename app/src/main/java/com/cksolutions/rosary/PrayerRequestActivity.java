@@ -194,9 +194,15 @@ public class PrayerRequestActivity extends AppCompatActivity {
                         progressBar.setVisibility(View.VISIBLE);
 
                         //Notifications
-                        InternetRequestHandler objInternetHandler = new InternetRequestHandler();
-                        objInternetHandler.formUrlPrayer(UName, prayer, queuetype);
-                        objInternetHandler.execute();
+                        //InternetRequestHandler objInternetHandler = new InternetRequestHandler();
+                        //objInternetHandler.formUrlPrayer(UName, prayer, queuetype);
+                        //objInternetHandler.execute();
+
+
+
+                        InternetRequestHandler2 obj2 = new InternetRequestHandler2();
+                        obj2.formUrlPrayer(UName, prayer, queuetype);
+                        obj2.Send();
 
                         finish();
 

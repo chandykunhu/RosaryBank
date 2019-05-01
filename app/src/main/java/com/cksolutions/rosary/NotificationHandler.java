@@ -52,7 +52,7 @@ public class NotificationHandler {
                 databaseRef.child("N" + (size + 1)).child("Message")
                         .setValue(" " + message + " ");
                 databaseRef.child("N" + (size + 1)).child("Image")
-                        .setValue("http://api.haizenetworks.com/prayerrequest.jpg");
+                        .setValue("http://api.haizenet.com/prayerrequest.jpg");
                 databaseRef.child("N" + (size + 1)).child("Severity")
                         .setValue("Normal: "+timeStamp+"");
             }
@@ -77,7 +77,7 @@ public class NotificationHandler {
                 databaseRef.child("N" + (size + 1)).child("Message")
                         .setValue(" " + message + " ");
                 databaseRef.child("N" + (size + 1)).child("Image")
-                        .setValue("http://api.haizenetworks.com/rosaryrequest.jpg");
+                        .setValue("http://api.haizenet.com/rosaryrequest.jpg");
                 databaseRef.child("N" + (size + 1)).child("Severity")
                         .setValue(""+severity+": "+timeStamp+"");
             }
@@ -108,7 +108,7 @@ public class NotificationHandler {
                 databaseRef.child("N" + (size + 1)).child("Message")
                         .setValue(" " + message + " ");
                 databaseRef.child("N" + (size + 1)).child("Image")
-                        .setValue("http://api.haizenetworks.com/marythanks.jpg");
+                        .setValue("http://api.haizenet.com/marythanks.jpg");
                 databaseRef.child("N" + (size + 1)).child("Severity")
                         .setValue("Normal: "+timeStamp+"");
             }
@@ -133,7 +133,7 @@ public class NotificationHandler {
                 databaseRef.child("N" + (size + 1)).child("Message")
                         .setValue(" " + message + " ");
                 databaseRef.child("N" + (size + 1)).child("Image")
-                        .setValue("http://api.haizenetworks.com/rosarydeposit.jpg");
+                        .setValue("http://api.haizenet.com/rosarydeposit.jpg");
                 databaseRef.child("N" + (size + 1)).child("Severity")
                         .setValue("Normal: "+timeStamp+"");
             }
@@ -162,7 +162,7 @@ public class NotificationHandler {
                 databaseRef.child("N" + (size + 1)).child("Message")
                         .setValue(" " + message + " ");
                 databaseRef.child("N" + (size + 1)).child("Image")
-                        .setValue("http://api.haizenetworks.com/newuser.png");
+                        .setValue("http://api.haizenet.com/newuser.png");
                 databaseRef.child("N" + (size + 1)).child("Severity")
                         .setValue("Normal: "+timeStamp+"");
             }

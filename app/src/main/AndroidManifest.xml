@@ -85,7 +85,32 @@
         <activity android:name=".PrayerRequestActivity" />
         <activity android:name=".GiveThanksActivity" />
         <activity android:name=".RosaryRequestActivity" />
-        <activity android:name=".TestimonyActivity"></activity>
+        <activity android:name=".TestimonyActivity" />
+        <activity
+            android:name=".prayers.common.RosaryPrayer"
+            android:label="@string/title_activity_rosary_prayer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".prayers.rosary.NormalRosaryType" />
+        <activity android:name=".prayers.rosary.MercyRosaryType" />
+        <activity
+            android:name=".prayers.rosary.normalenglish.NormalEnglishRosary"
+            android:label="@string/title_activity_normal_english_rosary"
+            android:parentActivityName=".prayers.rosary.NormalRosaryType"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cksolutions.rosary.prayers.rosary.NormalRosaryType" />
+        </activity>
+        <activity
+            android:name=".prayers.rosary.normalmalayalam.NormalMalayalamRosary"
+            android:label="@string/title_activity_normal_malayalam_rosary"
+            android:parentActivityName=".prayers.rosary.NormalRosaryType"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cksolutions.rosary.prayers.rosary.NormalRosaryType" />
+        </activity>
+              <activity android:name=".prayers.rosary.normalenglish.EnglishRosary"></activity>
     </application>
 
 </manifest>

@@ -17,6 +17,10 @@
             android:icon="@drawable/notification"
             android:title="Notifications" />
         <item
+            android:id="@+id/nav_prayers"
+            android:icon="@drawable/prayer"
+            android:title="Prayers" />
+        <item
             android:id="@+id/nav_getrewards"
             android:icon="@drawable/rewards"
             android:title="Get Rewards" />

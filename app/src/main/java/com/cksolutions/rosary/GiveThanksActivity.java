@@ -32,6 +32,7 @@ import java.util.Date;
 import java.util.Locale;
 
 import static com.cksolutions.rosary.MainActivity.UName;
+import static com.cksolutions.rosary.MainActivity.flag;
 
 public class GiveThanksActivity extends AppCompatActivity {
     private EditText inputPrayer; //inputRequesterName,
@@ -48,6 +49,7 @@ public class GiveThanksActivity extends AppCompatActivity {
     public static NetworkInfo activeNetwork;
     public static ConnectivityManager cm;
     private ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -191,11 +193,13 @@ public class GiveThanksActivity extends AppCompatActivity {
                         progressBar.setVisibility(View.VISIBLE);
 
                         //Notifications
-                        InternetRequestHandler objInternetHandler = new InternetRequestHandler();
-                        objInternetHandler.formUrlThanks(UName, thanks, queuetype);
-                        objInternetHandler.execute();
+                        //InternetRequestHandler objInternetHandler = new InternetRequestHandler();
+                        //objInternetHandler.formUrlThanks(UName, thanks, queuetype);
+                        //objInternetHandler.execute();
 
-
+                        InternetRequestHandler2 obj2 = new InternetRequestHandler2();
+                        obj2.formUrlThanks(UName, thanks, queuetype);
+                        obj2.Send();
                         finish();
 
                     } else {

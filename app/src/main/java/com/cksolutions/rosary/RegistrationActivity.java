@@ -25,6 +25,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.cksolutions.rosary.MainActivity.IsNewUser;
+import static com.cksolutions.rosary.MainActivity.UName;
 
 
 public class RegistrationActivity extends AppCompatActivity {
@@ -180,9 +181,14 @@ public class RegistrationActivity extends AppCompatActivity {
 
         if (IsNewUser) {
             String strreplace = (!name.isEmpty()) ? name : user.getEmail();
-            InternetRequestHandler objInternetHandler = new InternetRequestHandler();
-            objInternetHandler.formUrlNewJoin(strreplace, "Hi " + strreplace + " just joined Rosary Bank..");
-            objInternetHandler.execute();
+            //sInternetRequestHandler objInternetHandler = new InternetRequestHandler();
+            //objInternetHandler.formUrlNewJoin(strreplace, "Hi " + strreplace + " just joined Rosary Bank..");
+            //objInternetHandler.execute();
+
+
+            InternetRequestHandler2 obj2 = new InternetRequestHandler2();
+            obj2.formUrlNewJoin(strreplace, "Hi " + strreplace + " just joined Rosary Bank..");
+            obj2.Send();
         }
 
         // User data change listener

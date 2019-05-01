@@ -322,9 +322,14 @@ public class RosaryRequestActivity extends AppCompatActivity {
                         progressBar.setVisibility(View.VISIBLE);
 
                         //Notifications
-                        InternetRequestHandler objInternetHandler = new InternetRequestHandler();
-                        objInternetHandler.formUrlRequestRosary(UName, "Gifted " + rosaryAllocated + " " + strreplace + " to " + name + " by Rosary Bank. Note:" + note, severity);
-                        objInternetHandler.execute();
+                        //InternetRequestHandler objInternetHandler = new InternetRequestHandler();
+                        //objInternetHandler.formUrlRequestRosary(UName, "Gifted " + rosaryAllocated + " " + strreplace + " to " + name + " from Rosary Bank. Note:" + note, severity);
+                        //objInternetHandler.execute();
+
+
+                        InternetRequestHandler2 obj2 = new InternetRequestHandler2();
+                        obj2.formUrlRequestRosary(UName, "Gifted " + rosaryAllocated + " " + strreplace + " to " + name + " from Rosary Bank. Note:" + note, severity);
+                        obj2.Send();
 
                         Toast.makeText(RosaryRequestActivity.this, "By grace of GOD you are gifted " + rosaryAllocated + " Rosaries " +
                                 "from Rosary Bank. \n GOD bless you", Toast.LENGTH_LONG).show();

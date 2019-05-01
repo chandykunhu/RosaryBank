@@ -18,28 +18,28 @@ public class InternetRequestHandler extends AsyncTask<String,Void,String> {
     public void formUrlPrayer(String name,String message,String type)
     {
         IsPostExecute = false;
-        urlformat = "http://api.haizenetworks.com/?title=Prayer+Request+by+"+name+"&message="+message+"&include_image=on&push_type=topic";
+        urlformat = "http://api.haizenet.com/?title=Prayer+Request+by+"+name+"&message="+message+"&include_image=on&push_type=topic";
         objNHandler.RequestPrayer(name,message,type);
 
     }
     public void formUrlThanks(String name,String message,String type)
     {
         IsPostExecute = false;
-        urlformat = "http://api.haizenetworks.com/?title=Thanks+Given+by+"+name+"&message="+message+"&include_image=on&push_type=topic";
+        urlformat = "http://api.haizenet.com/?title=Thanks+Given+by+"+name+"&message="+message+"&include_image=on&push_type=topic";
         objNHandler.GivesThanks(name,message,type);
 
     }
     public void formUrlDepositRosary(String name,String message)
     {
         IsPostExecute = false;
-        urlformat = "http://api.haizenetworks.com/?title=Rosary+Deposit+by+"+name+"&message="+message+"&include_image=on&push_type=topic";
+        urlformat = "http://api.haizenet.com/?title=Rosary+Deposit+by+"+name+"&message="+message+"&include_image=on&push_type=topic";
         objNHandler.DepositRosary(name,message);
 
     }
     public void formUrlRequestRosary(String name,String message,final String severity)
     {
         IsPostExecute = false;
-        urlformat = "http://api.haizenetworks.com/?title=Rosary+Request+by+"+name+"&message="+message+"&include_image=on&push_type=topic";
+        urlformat = "http://api.haizenet.com/?title=Rosary+Request+by+"+name+"&message="+message+"&include_image=on&push_type=topic";
         objNHandler.RequestRosary(name,message,severity);
 
     }
@@ -47,10 +47,12 @@ public class InternetRequestHandler extends AsyncTask<String,Void,String> {
     public void formUrlNewJoin(String name,String message)
     {
         IsPostExecute = false;
-        urlformat = "http://api.haizenetworks.com/?title=New+User+Join+"+name+"&message="+message+"&include_image=on&push_type=topic";
+        urlformat = "http://api.haizenet.com/?title=New+User+Join+"+name+"&message="+message+"&include_image=on&push_type=topic";
         objNHandler.NewJoin(name,message);
 
     }
+
+
 
     @Override
     protected void onPreExecute() {

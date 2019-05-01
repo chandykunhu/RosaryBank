@@ -24,6 +24,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cksolutions.rosary.prayers.common.RosaryPrayer;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseError;
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity
     public static boolean IsNewUser;
     public static String UName = "Rosary Bank";
     public static String UEmail = "";
+    public static boolean flag = false;
+    public static boolean disableRequestButton = false;
     //Private
 
     private FirebaseAuth.AuthStateListener authListener;
@@ -65,6 +68,7 @@ public class MainActivity extends AppCompatActivity
     private DatabaseReference databaseRef5;
     private DatabaseReference databaseRef6;
     private DatabaseReference databaseRef7;
+
 
     static FirebaseUser user;
     static Handler handler;
@@ -305,10 +309,12 @@ public class MainActivity extends AppCompatActivity
                             if(Integer.parseInt(balanceRosary) < 0)
                             {
                                 btnRosaryRequest.setEnabled(false);
+                                disableRequestButton = true;
                                 Toast.makeText(MainActivity.this, "Deposit "+Math.abs(Integer.parseInt(balanceRosary))+" more " +
                                         "Mercy Rosary in Rosary Bank to Request Rosary", Toast.LENGTH_LONG).show();
                             }
                             else {
+                                if(!disableRequestButton)
                                 btnRosaryRequest.setEnabled(true);
                             }
                         }
@@ -327,15 +333,14 @@ public class MainActivity extends AppCompatActivity
                         String balanceRosary = balanceSnapshot.getValue().toString();
 
                         if (balanceRosary.trim().length() > 0) {
-                            if(Integer.parseInt(balanceRosary) < 0)
-                            {
+                            if (Integer.parseInt(balanceRosary) < 0) {
                                 btnRosaryRequest.setEnabled(false);
-
-                                Toast.makeText(MainActivity.this, "Deposit "+Math.abs(Integer.parseInt(balanceRosary))+" more " +
+                                disableRequestButton = true;
+                                Toast.makeText(MainActivity.this, "Deposit " + Math.abs(Integer.parseInt(balanceRosary)) + " more " +
                                         "Mercy Rosary in Rosary Bank to Request Rosary", Toast.LENGTH_LONG).show();
-                            }
-                            else {
-                                btnRosaryRequest.setEnabled(true);
+                            } else {
+                                if (!disableRequestButton)
+                                    btnRosaryRequest.setEnabled(true);
                             }
                         }
                     }
@@ -503,7 +508,7 @@ public class MainActivity extends AppCompatActivity
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
             }
         } else if (id == R.id.nav_aboutus) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://haizenetworks.com")));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://haizenet.com")));
         } else if (id == R.id.nav_community) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/jykoonammoochi/")));
         } else if (id == R.id.nav_notification) {
@@ -511,8 +516,9 @@ public class MainActivity extends AppCompatActivity
             //Toast.makeText(this, "This feature is under construction", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_getrewards) {
             startActivity(new Intent(MainActivity.this, DonateActivity.class));
+        } else if (id == R.id.nav_prayers) {
+            startActivity(new Intent(MainActivity.this, RosaryPrayer.class));
         }
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

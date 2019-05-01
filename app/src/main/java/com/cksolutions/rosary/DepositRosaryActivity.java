@@ -33,7 +33,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import static com.cksolutions.rosary.MainActivity.UName;
-
+import static com.cksolutions.rosary.MainActivity.disableRequestButton;
 
 public class DepositRosaryActivity extends AppCompatActivity {
     private EditText inputRosaryCount, inputRosaryType, inputShortNote;
@@ -255,6 +255,9 @@ public class DepositRosaryActivity extends AppCompatActivity {
 
                                                 int Rosary = Integer.parseInt(balanceRosary);
                                                 databaseRef.child("RosaryBankA").setValue(Integer.toString(Rosary + Integer.parseInt(count)));
+
+                                                if((Rosary + Integer.parseInt(count)) > 0)
+                                                    disableRequestButton = false;
                                             }
                                         }
                                     }
@@ -331,6 +334,8 @@ public class DepositRosaryActivity extends AppCompatActivity {
 
                                                 int Rosary = Integer.parseInt(balanceRosary);
                                                 databaseRef2.child("RosaryBankB").setValue(Integer.toString(Rosary + Integer.parseInt(count)));
+                                                if((Rosary + Integer.parseInt(count)) > 0)
+                                                    disableRequestButton = false;
                                             }
                                         }
                                     }
@@ -489,9 +494,14 @@ public class DepositRosaryActivity extends AppCompatActivity {
                         progressBar.setVisibility(View.VISIBLE);
 
                         //Notifications
-                        InternetRequestHandler objInternetHandler = new InternetRequestHandler();
-                        objInternetHandler.formUrlDepositRosary(UName, "Added " + count + " " + strreplace + ". Note:" + strNote);
-                        objInternetHandler.execute();
+                        //InternetRequestHandler objInternetHandler = new InternetRequestHandler();
+                        //objInternetHandler.formUrlDepositRosary(UName, "Added " + count + " " + strreplace + ". Note:" + strNote);
+                        //objInternetHandler.execute();
+
+
+                        InternetRequestHandler2 obj2 = new InternetRequestHandler2();
+                        obj2.formUrlDepositRosary(UName, "Added " + count + " " + strreplace + ". Note:" + strNote);
+                        obj2.Send();
 
                         Toast.makeText(DepositRosaryActivity.this, "Rosary deposited. Thanks for your prayers. You got 10 points",
                                 Toast.LENGTH_SHORT).show();

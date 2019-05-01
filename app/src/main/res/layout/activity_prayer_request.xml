@@ -58,14 +58,14 @@
             android:id="@+id/etGiveThanks"
             android:layout_width="332dp"
             android:layout_height="111dp"
-            android:maxLength="50"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:ems="10"
             android:hint="Prayer"
             android:inputType="textMultiLine"
+            android:maxLength="100"
             android:textColor="@color/btn_login_bg"
-            android:textSize="20sp"
+            android:textSize="18sp"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="302dp" />
 

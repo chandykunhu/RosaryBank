@@ -30,4 +30,6 @@
     <color name="item_name">#535353</color>
     <color name="description">#a9a9a9</color>
 
+    <color name="album_title">#4c4c4c</color>
+
 </resources>

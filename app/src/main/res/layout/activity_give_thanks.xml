@@ -62,9 +62,9 @@
             android:ems="10"
             android:hint="Give thanks to prayers and blessings"
             android:inputType="textMultiLine"
-            android:maxLength="50"
+            android:maxLength="100"
             android:textColor="@color/btn_login_bg"
-            android:textSize="20sp"
+            android:textSize="18sp"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="302dp" />
 
